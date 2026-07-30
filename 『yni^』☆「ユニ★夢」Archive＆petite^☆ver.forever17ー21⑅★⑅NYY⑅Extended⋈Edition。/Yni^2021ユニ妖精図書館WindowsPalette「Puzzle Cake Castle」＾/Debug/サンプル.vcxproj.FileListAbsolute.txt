@@ -1,6 +1,0 @@
-C:\Users\legal\OneDrive\Desktop\uni-elケーキ妖精ティータイムver1.5.2020.8.3\Debug\サンプル.exe
-C:\Users\legal\OneDrive\Desktop\uni-elケーキ妖精ティータイムver1.5.2020.8.3\Debug\サンプル.pdb
-C:\Users\legal\OneDrive\Desktop\uni-elケーキ妖精ティータイムver1.5.2020.9\Debug\サンプル.exe
-C:\Users\legal\OneDrive\Desktop\uni-elケーキ妖精ティータイムver1.5.2020.9\Debug\サンプル.pdb
-F:\Work\MY★SoftwarePortfolio\Projects\『uni-el』ケーキ妖精ティータイムver2020.8.14。\Debug\サンプル.exe
-F:\Work\MY★SoftwarePortfolio\Projects\「ユニ★アーカイブ」 2019 Legacy. Windows Palette\Debug\サンプル.exe

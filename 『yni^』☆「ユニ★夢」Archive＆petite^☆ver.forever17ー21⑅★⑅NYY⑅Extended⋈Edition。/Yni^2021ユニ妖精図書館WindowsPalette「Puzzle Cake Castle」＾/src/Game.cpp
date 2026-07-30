@@ -62,40 +62,44 @@ void GameUpdate()
 	}
 	if (scene_num != scene_next) {
 		scene_num = scene_next;
-		switch (scene_num) {
-		case SCENE_TITLE:
-			TitleInit();
-			break;
-		case SCENE_STAGE:
-			StageInit();
-			break;
+		switch (scene_num)
+		{
+	    	case SCENE_TITLE:
+			 TitleInit();
+			 break;
 
-		case SCENE_CLEAR:
-			ClearInit();
-			break;
+		    case SCENE_STAGE:
+			 StageInit();
+			 break;
+
+		    case SCENE_CLEAR:
+			 ClearInit();
+		     break;
 		}
 
 	}
 
-	switch (scene_num) {
-	case SCENE_TITLE:
-		TitleUpdate();
-		break;
-	case SCENE_STAGE:
-		StageUpdate();
-		break;
+	switch (scene_num) 
+	{
+	      case SCENE_TITLE:
+		   TitleUpdate();
+		   break;
 
-	case SCENE_CLEAR:
-		ClearUpdate();
-		break;
+	      case SCENE_STAGE:
+		   StageUpdate();
+	       break;
+
+	      case SCENE_CLEAR:
+		   ClearUpdate();
+		   break;
 	}
 }
 void GameRender()
 {
 
 	switch (scene_num) {
-	case SCENE_TITLE:
-		TitleRender();
+	     case SCENE_TITLE:
+		  TitleRender();
 		
 		for (int i = 0; i < BALL_MAX; i++) {
 			float now_y = ball_pos[i].y - START_Y;
@@ -113,8 +117,8 @@ void GameRender()
 			//DrawCircleAA(pos[i].x, pos[i].y, 5.0f, 32, GetColor(GetRand(255), GetRand(255), GetRand(255)));
 		}
 		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
-
 		break;
+
 	case SCENE_STAGE:
 		StageRender();
 		break;

@@ -3,7 +3,7 @@
 #include "Title.h"
 #include "Stage.h"
 #include <string>
-int		clear_image;
+int clear_image;
 int select_num;
 
 

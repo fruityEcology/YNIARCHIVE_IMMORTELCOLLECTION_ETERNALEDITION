@@ -12,7 +12,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	SetOutApplicationLogValidFlag(FALSE);
 	ChangeWindowMode(TRUE);
-	SetWindowText("「ユニ★アーカイブ」 2019 Legacy. Windows Palette ☆ 2021_6.07.29");
+	SetWindowText("「ユニ★アーカイブ」 2019 Legacy. Windows Palette ☆ 2021_6.07.29.1");
 	SetBackgroundColor(255, 255, 255);
 
 	SetGraphMode(SCREEN_W, SCREEN_H, 32);
