@@ -108,6 +108,7 @@
     <ClCompile Include="src\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="src\Base.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\Clear.h" />
@@ -120,6 +121,12 @@
     <ClInclude Include="src\Title.h" />
     <ClInclude Include="src\Vector2.h" />
     <ClInclude Include="src\Vector3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="サンプル.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ユニ☆彡StarteaЯ★Rainbow.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

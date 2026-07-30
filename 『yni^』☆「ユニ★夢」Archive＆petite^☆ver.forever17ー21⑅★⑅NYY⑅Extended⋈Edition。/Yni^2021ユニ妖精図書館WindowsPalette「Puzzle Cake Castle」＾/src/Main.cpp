@@ -1,23 +1,45 @@
 #include "Main.h"
 #include "Game.h"
+#include <windows.h>  // Add this for icon functions
 
 char KeyBuffer[256];
 char KeyBefore[256];
 int MouseBefore = 0;
 
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
 	int Time;
 
 	SetOutApplicationLogValidFlag(FALSE);
 	ChangeWindowMode(TRUE);
-	SetWindowText("「ユニ★アーカイブ」 2019 Legacy. Windows Palette ☆ 2021_6.07.29.1");
+	SetWindowText("「ユニ★アーカイブ」 2019 Legacy. Windows Palette ☆ 2021_6.08.01");
 	SetBackgroundColor(255, 255, 255);
 
 	SetGraphMode(SCREEN_W, SCREEN_H, 32);
 
 	if (DxLib_Init() == -1)	return -1;
+
+	// ==========================================
+	// Set Window Icon - Load directly from file
+	// ==========================================
+	HWND hWnd = GetMainWindowHandle();
+	if (hWnd) {
+		// Load icon from file
+		HICON hIcon = (HICON)LoadImageA(
+			NULL,
+			"ユニ☆彡StarteaЯ★Rainbow.ico",  // Make sure this file is in your project folder
+			IMAGE_ICON,
+			0, 0,
+			LR_LOADFROMFILE | LR_DEFAULTSIZE
+		);
+
+		if (hIcon) {
+			SendMessageA(hWnd, WM_SETICON, ICON_BIG, (LPARAM)hIcon);
+			SendMessageA(hWnd, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
+		}
+	}
+	// ==========================================
 
 	SetDrawScreen(DX_SCREEN_BACK);
 	SetTransColor(255, 0, 255);
