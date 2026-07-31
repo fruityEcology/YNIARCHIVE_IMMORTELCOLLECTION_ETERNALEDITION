@@ -2,7 +2,7 @@
 #include "Game.h"
 #include "Title.h"
 
-int		title_image;
+int title_image;
 
 void TitleLoad()
 {

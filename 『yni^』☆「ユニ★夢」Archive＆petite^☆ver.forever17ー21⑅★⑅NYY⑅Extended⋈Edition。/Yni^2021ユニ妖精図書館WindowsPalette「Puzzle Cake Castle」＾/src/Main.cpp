@@ -1,6 +1,6 @@
 #include "Main.h"
 #include "Game.h"
-#include <windows.h>  // Add this for icon functions
+#include <windows.h>
 
 char KeyBuffer[256];
 char KeyBefore[256];
@@ -13,7 +13,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 	SetOutApplicationLogValidFlag(FALSE);
 	ChangeWindowMode(TRUE);
-	SetWindowText("「ユニ★アーカイブ」 2019 Legacy. Windows Palette ☆ 2021_6.08.01");
+	SetWindowText("「ユニ★アーカイブ」 2019 Legacy. Windows Palette ☆ 2021_6.08.01.33");
 	SetBackgroundColor(255, 255, 255);
 
 	SetGraphMode(SCREEN_W, SCREEN_H, 32);
@@ -21,14 +21,11 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	if (DxLib_Init() == -1)	return -1;
 
 	// ==========================================
-	// Set Window Icon - Load directly from file
-	// ==========================================
 	HWND hWnd = GetMainWindowHandle();
 	if (hWnd) {
-		// Load icon from file
 		HICON hIcon = (HICON)LoadImageA(
 			NULL,
-			"ユニ☆彡StarteaЯ★Rainbow.ico",  // Make sure this file is in your project folder
+			"ユニ☆彡StarteaЯ★Rainbow.ico",
 			IMAGE_ICON,
 			0, 0,
 			LR_LOADFROMFILE | LR_DEFAULTSIZE
